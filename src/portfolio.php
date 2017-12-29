@@ -181,6 +181,8 @@
       	$("[data-fancybox]").fancybox({
       		// Options will go here
       		loop : true,
+      		// fade
+      		animationEffect : "zoom-in-out",
       	});
       	
       	let selectedClass = "";

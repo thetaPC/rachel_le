@@ -30,12 +30,12 @@
     transition: all 350ms ease;
 }
 
-.resize {
-    height: 400px; 
-    width: 360px; 
-    overflow: hidden;
-    margin-bottom: 17px;
-}
+/*.resize {*/
+/*    height: 400px; */
+/*    width: 360px; */
+/*    overflow: hidden;*/
+/*    margin-bottom: 17px;*/
+/*}*/
 
 .tile:hover { 
 
@@ -118,4 +118,26 @@ span {
 .dotted {
     outline-style: dotted;
     outline-width: 1px;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 993px)  {
+    
+   .resize {
+        height: 340px; 
+        width: 300px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (min-width: 1201px)  {
+    
+   .resize {
+        height: 400px; 
+        width: 360px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
 }
