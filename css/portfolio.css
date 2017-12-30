@@ -120,7 +120,7 @@ span {
     outline-width: 1px;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 993px)  {
+@media only screen and (max-width: 1200px) and (min-width: 992px)  {
     
    .resize {
         height: 340px; 
@@ -131,7 +131,106 @@ span {
 
 }
 
-@media only screen and (min-width: 1201px)  {
+@media only screen and (max-width: 991px) and (min-width: 768px)  {
+    
+   .resize {
+        height: 258px; 
+        width: 218px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (max-width: 767px) and (min-width: 501px)  {
+    
+   .resize {
+        height: 199px; 
+        width: 159px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (max-width: 500px) and (min-width: 461px)  {
+    
+   .resize {
+        height: 184px; 
+        width: 144px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (max-width: 460px) and (min-width: 422px)  {
+    
+   .resize {
+        height: 170px; 
+        width: 130px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (max-width: 421px) and (min-width: 396px)  {
+    
+   .resize {
+        height: 160px; 
+        width: 120px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (max-width: 395px) and (min-width: 366px)  {
+    
+   .resize {
+        height: 149px; 
+        width: 109px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (max-width: 365px) and (min-width: 336px)  {
+    
+   .resize {
+        height: 140px; 
+        width: 100px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (max-width: 335px) and (min-width: 306px)  {
+    
+   .resize {
+        height: 132px; 
+        width: 92px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (max-width: 305px)  {
+    
+   .resize {
+        height: 120px; 
+        width: 80px; 
+        overflow: hidden;
+        margin-bottom: 17px;
+    }         
+
+}
+
+@media only screen and (min-width: 1200px)  {
     
    .resize {
         height: 400px; 

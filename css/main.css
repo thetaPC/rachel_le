@@ -82,7 +82,7 @@
 }
 
 .fl-fl a {
-  color: black !important;
+  color: white !important;
   text-decoration: none;
   text-align: center;
   line-height: 43px!important;
@@ -95,14 +95,14 @@
 }
 
 .float-fb:hover {
-  background: white;
-  border-left: 2px solid #4060A5;
-  border-top: 2px solid #4060A5;
-  border-bottom: 2px solid #4060A5;
+  /*background: white;*/
+  /*border-left: 2px solid #4060A5;*/
+  /*border-top: 2px solid #4060A5;*/
+  /*border-bottom: 2px solid #4060A5;*/
 }
 
 .float-fb:hover .fa-facebook {
-  color: #4060A5 !important;
+  /*color: #4060A5 !important;*/
 }
 
 .float-in {
@@ -116,7 +116,7 @@
 }
 
 .float-in:hover a {
-  color: white !important;
+  /*color: white !important;*/
 }
 
 .float-li {
