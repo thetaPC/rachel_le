@@ -2,7 +2,9 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="index.php"><img class="logo" src="../img/rach_logo.png"></a>
+      <a class="navbar-brand" href="index.php">
+        <!--<img class="logo" src="../img/rach_logo.png">-->
+      </a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
