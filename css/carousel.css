@@ -13,3 +13,27 @@
     -o-background-size: cover;
     background-size: cover;
 }
+
+.intro {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px !important;
+    border: 1px solid black;
+    color: black;
+    bottom: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    top: 44%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.intro-text {
+    margin-bottom: 0px;
+    color: #292b2c;
+}
+
+@media screen and (max-width: 683px) {
+    .intro-text {
+        font-size: 20px;
+    }
+}

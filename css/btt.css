@@ -42,18 +42,3 @@
     color: #fff;
     top: 5px;
 }
-            
-#return-to-top img {
-    color: #fff;
-    margin: 0;
-    position: relative;
-    left: 27%;
-    top: 18%;
-    font-size: 19px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    width: 25px;
-}

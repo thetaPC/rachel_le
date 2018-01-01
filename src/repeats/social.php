@@ -1,11 +1,4 @@
-<!-- Social Icons -->
-    <!--<div id="social_side_links">-->
-    <!--  <a target="_blank" class="facebookBtn smGlobalBtn" href="#"></a>-->
-    <!--  <a target="_blank" class="instagramBtn smGlobalBtn" href="#"></a>-->
-    <!--  <a target="_blank" class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/rachel-le-a91b60148/"></a>-->
-    <!--</div>-->
-    
-    <!-- Floating Social Media bar Starts -->
+<!-- Floating Social Media bar Starts -->
 <div class="float-sm">
   <div class="fl-fl float-fb">
     <i class="fa fa-facebook"></i>

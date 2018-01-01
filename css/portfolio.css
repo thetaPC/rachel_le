@@ -1,15 +1,3 @@
-.jumbotron {
-    min-height: 63px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    /*background: url('https://img00.deviantart.net/8e66/i/2016/032/3/0/surrounded_by_sketch_and_smile-d9q746j.png');*/
-}
-
-.jumbotron-fluid {
-    background-color: white;
-}
-
-/* gallery */
 #portfolio {  
     margin: 1rem 0;
     -webkit-column-count: 3; 
@@ -30,34 +18,8 @@
     transition: all 350ms ease;
 }
 
-/*.resize {*/
-/*    height: 400px; */
-/*    width: 360px; */
-/*    overflow: hidden;*/
-/*    margin-bottom: 17px;*/
-/*}*/
-
-.tile:hover { 
-
-}
-
 .scale-anm {
   transform: scale(1);
-}
-
-.tile img {
-    /*max-width: 100%;*/
-    /*width: 100%;*/
-    /*height: auto;*/
-    /*margin-bottom: 1rem;*/
-    /*margin: -75px 0 0 -233px;*/ /* move the image around to specific location */
-}
-
-.port_img {
-    width: 360px;
-    height: 400px;
-    margin-bottom: 1rem;
-    /*background-image: url('https://pre00.deviantart.net/4129/th/pre/i/2016/051/7/f/single_yet_not_lonely_by_sketch_and_smile-d9sitn9.jpg');*/
 }
 
 .art-categories {
@@ -83,32 +45,7 @@
 }
 
 span {
-    color: rgba(0,0,0,.1);
-}
-
-/*@media all and (min-width: 800px) {*/
-
-/*  .fancybox-thumbs {*/
-/*    top: auto;*/
-/*    width: auto;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    right : 0;*/
-/*    height: 95px;*/
-/*    padding: 10px;*/
-/*    box-sizing: border-box;*/
-/*    background: rgba(0, 0, 0, 0.3);*/
-/*  }*/
-  
-/*  .fancybox-show-thumbs .fancybox-inner {*/
-/*    right: 0;*/
-/*    bottom: 95px;*/
-/*  }*/
-
-/*}*/
-
-.bold {
-    font-weight: 700;
+    color: rgba(0, 0, 0, .1);
 }
 
 .port-section {

@@ -3,30 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Rachel</title>
+    <title>Rachel - Portfolio</title>
 
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/fancybox/jquery.fancybox.min.css">
     
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/social.css">
     <link rel="stylesheet" href="../css/portfolio.css">
     <link rel="stylesheet" href="../css/btt.css">
+    
   </head>
 
   <body>
 
     <?php include 'repeats/navbar.php'; ?>
-    <?php include 'repeats/social.php' ?>
-    <?php include 'repeats/backtotop.html' ?>
+    <?php include 'repeats/social.php'; ?>
+    <?php include 'repeats/backtotop.html'; ?>
     
     
     <div class="container port-section">
       <div class="row justify-content-center">
         <div class="col-md-6">
           <hr>
-          <div class="toolbar mb2 mt2">
             <button class="art-categories fil-cat" href="" data-rel="all">All</button>
             <span>/</span>
             <button class="art-categories fil-cat" data-rel="digital">Digital</button>
@@ -36,7 +35,6 @@
             <button class="art-categories fil-cat" data-rel="traditional">Traditional</button>
             <span>/</span>
             <button class="art-categories fil-cat" data-rel="logos">Logos</button>
-          </div>
           <hr>
         </div>
       </div>
@@ -69,7 +67,6 @@
               <img class="" src="https://pre00.deviantart.net/fc2b/th/pre/i/2015/271/8/e/surprise_2_0_by_sketch_and_smile-d9bai14.jpg" alt="" />
             </div>
           </a>
-          
         </div>
         <div class="tile scale-anm traditional all">
           <a class="a_img" data-fancybox="group" data-caption="Mutsumi Senpai" href="https://pre00.deviantart.net/96d3/th/pre/f/2016/316/5/8/2_by_sketch_and_smile-dao7llk.jpg">
@@ -77,7 +74,6 @@
               <img class=""src="https://pre00.deviantart.net/96d3/th/pre/f/2016/316/5/8/2_by_sketch_and_smile-dao7llk.jpg" alt="" />
             </div>
           </a>
-          
         </div>
         <div class="tile scale-anm abstract all">
           <a class="a_img" data-fancybox="group" data-caption="Struggle" href="https://pre00.deviantart.net/aed2/th/pre/f/2015/271/e/4/struggle_by_sketch_and_smile-d9b9jhp.jpg">
@@ -166,18 +162,14 @@
       </div>
     </div> 
 
-
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="../js/fancybox/jquery.fancybox.min.js"></script>
     <script src="../js/btt.js"></script>
+    
     <script>
-      
       $(document).ready(function() {
-      	/* This is basic - uses default settings */
-      	
       	$("[data-fancybox]").fancybox({
       		// Options will go here
       		loop : true,
@@ -187,8 +179,6 @@
       	let selectedClass = "";
       		$(".fil-cat").on('click', function() { 
         		selectedClass = $(this).attr("data-rel"); 
-        		console.log(selectedClass);
-        		$(".art-categories").not("."+selectedClass).removeClass('bold');
             $("#portfolio").fadeTo(100, 0.1);
         		$("#portfolio .tile").not("."+selectedClass).fadeOut().removeClass('scale-anm');
         		$(".a_img").not("."+selectedClass).attr('data-fancybox', '');
@@ -206,9 +196,6 @@
         $(this).addClass('dotted');
       });
       
-    
-      
-        
     </script>
   </body>
 </html>
