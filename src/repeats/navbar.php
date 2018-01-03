@@ -12,7 +12,7 @@
         <a class="nav-link" href="portfolio.php">PORTFOLIO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ARCHIVE</a>
+        <a class="nav-link" href="archive.php">ARCHIVE</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="about.php">ABOUT</a>

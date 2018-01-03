@@ -21,7 +21,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE2b9s1PAZ_a2zulEjHCz7B7Maz9yMP06VV-mH9LCop-_Cpw/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                <!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE2b9s1PAZ_a2zulEjHCz7B7Maz9yMP06VV-mH9LCop-_Cpw/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
+               <form method="POST" action="http://formspree.io/orcaluver@yahoo.com">
+  <input name="email" placeholder="Your email" type="email">
+  <input name="name" placeholder="Your name" type="text">
+  <input name="phone" placeholder="Your phone" type="text">
+  <textarea name="message" placeholder="Your message"></textarea>
+  <button type="submit">Send</button>
+</form>
             </div>
         </div>
     </div>
