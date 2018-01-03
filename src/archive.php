@@ -80,7 +80,7 @@
             </div>
         </div>
         <?php
-            
+            // SELECT * FROM gallery ORDER BY year desc, month desc;
         ?>
     </div>
     

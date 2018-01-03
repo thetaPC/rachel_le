@@ -10,6 +10,9 @@
 
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/social.css">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/contact.css" type="text/css" />
   </head>
 
   <body>
@@ -18,23 +21,49 @@
     <?php include 'repeats/social.php'; ?>
     
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE2b9s1PAZ_a2zulEjHCz7B7Maz9yMP06VV-mH9LCop-_Cpw/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
-               <form method="POST" action="http://formspree.io/orcaluver@yahoo.com">
-  <input name="email" placeholder="Your email" type="email">
-  <input name="name" placeholder="Your name" type="text">
-  <input name="phone" placeholder="Your phone" type="text">
-  <textarea name="message" placeholder="Your message"></textarea>
-  <button type="submit">Send</button>
-</form>
-            </div>
-        </div>
-    </div>
+    <div id="contact" class="cont-section">
+		<div class="section-content">
+			<h1 class="section-header">Get in <span class="content-header"> Touch with me</span></h1>
+			<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+		</div>
+		<div class="contact-section">
+			<div class="container">
+				<form>
+				    <div class="row">
+                        <div class="col-md-6 form-line">
+    			  			<div class="form-group">
+    			  				<label for="name">Your name</label>
+    					    	<input type="text" class="form-control" id="name" placeholder="Enter name" required>
+    				  		</div>
+    				  		<div class="form-group">
+    					    	<label for="email">Email Address</label>
+    					    	<input type="email" class="form-control" id="email" placeholder="Enter email" required>
+    					  	</div>	
+    					  	<div class="form-group">
+    					    	<label for="telephone">Phone No.</label>
+    					    	<input type="tel" class="form-control" id="telephone" placeholder="Enter phone number">
+    			  			</div>
+			  		    </div>
+    			  		<div class="col-md-6">
+    			  			<div class="form-group">
+    			  				<label for="description">Message</label>
+    			  			 	<textarea class="form-control" id="description" placeholder="Enter Your Message" required></textarea>
+    			  			</div>
+    			  			<button type="submit" class="btn btn-outline-secondary submit">
+    			  			    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+    			  			    Send Message
+			  			    </button>
+    					</div>
+					</div>
+				</form>
+			</div>
+		</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      
+    <script type="text/javascript" src="../js/slack.js"></script>
+    </script>
   </body>
 </html>
