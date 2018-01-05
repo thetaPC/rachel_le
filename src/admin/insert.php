@@ -25,9 +25,9 @@
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             // echo $_POST["name"] . " " . $_POST["description"] . " " . $_POST["category"] . " " . $_POST["slide"];
             if(isset($_POST['slide'])) {
-                $sql = "INSERT INTO images (name, description, category, file_name, slideshow) VALUES ('" . $_POST["name"] . "', '" . $_POST["description"] . "', '" . $_POST["category"] . "', '" . $_FILES["fileToUpload"]["name"] . "', '" . $_POST["slide"] . "')";
+                $sql = "INSERT INTO images (name, description, category, file_name, slideshow, year, month) VALUES ('" . $_POST["name"] . "', '" . $_POST["description"] . "', '" . $_POST["category"] . "', '" . $_FILES["fileToUpload"]["name"] . "', '" . $_POST["slide"] . "', '" . $_POST["year"] . "', '" . $_POST["month"] . "')";
             } else {
-                $sql = "INSERT INTO images (name, description, category, file_name) VALUES ('" . $_POST["name"] . "', '" . $_POST["description"] . "', '" . $_POST["category"] . "', '" . $_FILES["fileToUpload"]["name"] . "')";
+                $sql = "INSERT INTO images (name, description, category, file_name, year, month) VALUES ('" . $_POST["name"] . "', '" . $_POST["description"] . "', '" . $_POST["category"] . "', '" . $_FILES["fileToUpload"]["name"] . "', '" . $_POST["year"] . "', '" . $_POST["month"] . "')";
             }
             
             if (mysqli_query($conn, $sql)) {
@@ -79,6 +79,20 @@
                         <div class="form-group">
                             <label for="desc">Description</label>
                             <input type="text" name="description" class="form-control" id="desc">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="month">Month</label>
+                                    <input type="number" name="month" class="form-control" id="month" required>
+                                </div> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="year">Year</label>
+                                    <input type="number" name="year" class="form-control" id="year" required>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
