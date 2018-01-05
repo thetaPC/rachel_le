@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <form id="updateForm" class="hidden" method="POST" action="" enctype="multipart/form-data">
+                    <form id="updateForm" data-id="" class="hidden" method="POST" action="" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" value="" class="form-control" id="name" required>
@@ -60,6 +60,20 @@
                         <div class="form-group">
                             <label for="desc">Description</label>
                             <input type="text" name="description" value="" class="form-control" id="desc">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="month">Month</label>
+                                    <input type="number" name="month" class="form-control" id="month" required>
+                                </div> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="year">Year</label>
+                                    <input type="number" name="year" class="form-control" id="year" required>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
@@ -84,7 +98,7 @@
                             </div>
                         </div>
                         <center>
-                            <button id="sub" class="btn btn-primary">Update</button>
+                            <button id="upd" class="btn btn-primary">Update</button>
                             <button id="can" type="button" class="btn btn-dark">Cancel</button>
                             <button id="del" type="button" class="btn btn-danger">Delete</button>
                         </center>
@@ -110,6 +124,7 @@
                     },
                     success: function(data) {
                         // alert("ADDED!");
+                        $('.indv_img').remove();
                         $.each(data, function(i, img) {
                             $('.gallery').append("<div class='col-md-3 indv_img'>" +
                                                     "<div class='resize'>" +
@@ -126,7 +141,7 @@
         });
         
         $('.gallery').on('click', '.editable', function() {
-            $('#updateForm').removeClass('hidden');
+            let id = $(this).attr('data-id');
             $('.indv_img').addClass('hidden');
             $(this).parent().parent().removeClass('hidden');
             $.ajax({
@@ -139,19 +154,81 @@
                 success: function(data) {
                     // alert("ADDED!");
                     // console.log(data);
+                    // console.log(data.description);
+                    $('#updateForm').attr('data-id', id);
                     $('#name').val(data.name);
-                    $('#description').val(data.description);
+                    $('#desc').val(data.description);
                     $('#catIndv').val(data.category);
                     if (data.slideshow == true) {
                         $('#slide').prop( "checked", true );
                     } else {
                         $('#slide').prop( "checked", false );
                     }
+                    $('#month').val(data.month);
+                    $('#year').val(data.year);
+                    $('#year').val(data.year);
+                    $('#updateForm').removeClass('hidden');
                 },
                 complete: function(data) { //optional, used for debugging purposes
                     
                 }
             });//AJAX 
         });
+        
+        $('#upd').on('click', function(e) {
+            e.preventDefault();
+            let checked;
+            if ($('#slide').is(':checked')) {
+                checked = 1;
+            } else {
+                checked = 0;
+            }
+            $.ajax({
+                type: "POST",
+                url: "update.php",
+                dataType: "json",
+                data: {
+                    "id": $('#updateForm').attr('data-id'),
+                    "name": $("#name").val(),
+                    "description": $("#desc").val(),
+                    "month": $("#month").val(),
+                    "year": $("#year").val(),
+                    "slide": checked,
+                    "category": $("#catIndv").val(),
+                },
+                success: function(data,status) {
+                    // alert("ADDED!");
+                    
+                  },
+                  complete: function(data,status) { //optional, used for debugging purposes
+                      //alert(status);
+                    $('#updateForm').attr('data-id', '');
+                    $('#name').val('');
+                    $('#desc').val('');
+                    $('#catIndv').val('');
+                    $('#slide').prop( "checked", false );
+                    $('#month').val('');
+                    $('#year').val('');
+                    $('#year').val('');
+                    $('#updateForm').addClass('hidden');
+                    $('.indv_img').removeClass('hidden');
+                  }
+            });//AJAX 
+        });
+        
+        $('#can').on('click', function(e) {
+            e.preventDefault();
+            $('#updateForm').attr('data-id', '');
+            $('#name').val('');
+            $('#desc').val('');
+            $('#catIndv').val('');
+            $('#slide').prop( "checked", false );
+            $('#month').val('');
+            $('#year').val('');
+            $('#year').val('');
+            $('#updateForm').addClass('hidden');
+            $('.indv_img').removeClass('hidden');
+        });
+        
     </script>
 </body>
