@@ -3,22 +3,22 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="index.php">
-    <img class="logo" src="../img/rachel_logo.PNG">
+    <img class="logo" src="/v2_rachel/img/rachel_logo.PNG">
   </a>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="portfolio.php">PORTFOLIO</a>
+        <a class="nav-link" href="/v2_rachel/src/portfolio.php">PORTFOLIO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="archive.php">ARCHIVE</a>
+        <a class="nav-link" href="/v2_rachel/src/archive.php">ARCHIVE</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.php">ABOUT</a>
+        <a class="nav-link" href="/v2_rachel/src/about.php">ABOUT</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contact.php">CONTACT</a>
+        <a class="nav-link" href="/v2_rachel/src/contact.php">CONTACT</a>
       </li>
     </ul>
   </div>
