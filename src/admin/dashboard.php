@@ -52,7 +52,7 @@
                     <a href="edit.php">Edit Existing Image</a>
                 </div>
                 <div class="col-md-2">
-                    <a href="">My Account</a>
+                    <a href="myaccount.php">My Account</a>
                 </div>
             </div>
         </div>

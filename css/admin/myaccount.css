@@ -1,0 +1,13 @@
+.sidebar {
+    background-color: #17A2B8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-right: 15px;
+    border: 1px solid #17a2b8;
+    border-radius: 0.25rem;
+}
+
+.sidebar a, .sidebar a:hover {
+    color: white;
+}
