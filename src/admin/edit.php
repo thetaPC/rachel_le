@@ -230,5 +230,38 @@
             $('.indv_img').removeClass('hidden');
         });
         
+        $("#del").click(function(e) {
+           e.preventDefault();
+           let id = $('#updateForm').attr('data-id');
+           if (confirm('Are you sure you want to delete this?')) {
+               $.ajax({
+                    type: "POST",
+                    url: "delete.php",
+                    dataType: "json",
+                    data: {
+                        "id": $('#updateForm').attr('data-id'),
+                        "img_loc": $('.editable').not('.hidden').attr('src'),
+                    },
+                    success: function(data,status) {
+                        // alert("ADDED!");
+                      },
+                      complete: function(data,status) { //optional, used for debugging purposes
+                            //alert(status);
+                            $('#updateForm').attr('data-id', '');
+                            $('#name').val('');
+                            $('#desc').val('');
+                            $('#catIndv').val('');
+                            $('#slide').prop( "checked", false );
+                            $('#month').val('');
+                            $('#year').val('');
+                            $('#year').val('');
+                            $('#updateForm').addClass('hidden');
+                            $('.indv_img').removeClass('hidden');
+                      }
+               });//AJAX 
+               $('[data-id="' + id + '"]').addClass('hidden');
+           }
+        });
+        
     </script>
 </body>
