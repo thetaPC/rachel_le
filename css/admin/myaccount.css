@@ -11,3 +11,7 @@
 .sidebar a, .sidebar a:hover {
     color: white;
 }
+
+.hidden {
+    display: none;
+}

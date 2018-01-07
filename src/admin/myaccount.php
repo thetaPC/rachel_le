@@ -34,92 +34,100 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="sidebar">
-                        <a href="#" class="" role="button">Profile Picture</a><br>
-                        <a href="#" class="" role="button">Biography</a><br>
-                        <a href="#" class="" role="button">Website Logo</a><br>
-                        <a href="#" class="" role="button">Password</a><br>
+                        <a href="#" class="sidebar-item" data-id="profile_pic" role="button">Profile Picture</a><br>
+                        <a href="#" class="sidebar-item" data-id="biog" role="button">Biography</a><br>
+                        <a href="#" class="sidebar-item" data-id="site_logo" role="button">Website Logo</a><br>
+                        <a href="#" class="sidebar-item" data-id="up_pass" role="button">Password</a><br>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <?php
-                        $sql = "SELECT * FROM my_account WHERE id=1";
-                        $res = mysqli_query($conn, $sql);
-                        
-                        if (mysqli_num_rows($res) > 0) {
-                            while ($row = mysqli_fetch_assoc($res)) {
-                                echo "<img src='../../img/" . $row["profile_img"] . "' class='img-fluid' alt='Rachel Le'>";
-                            }
+                    <div id="profile_pic" class="hidden acct_form">
+                        <?php
+                            $sql = "SELECT * FROM my_account WHERE id=1";
+                            $res = mysqli_query($conn, $sql);
                             
-                        } 
-                    ?>
-                    <!--<img src="../../img/rach1.jpg" class="img-fluid" alt="Rachel Le"> -->
-                    <form id="updateProfImg" data-id="" class="" method="POST" action="" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="fileToUpload">Select image to upload:</label>
-                            <input type="file" name="fileToUpload" id="fileToUpload" required>
-                            <!--<input type="submit" value="Upload Image" name="submit">-->
-                        </div>
-                        <center>
-                            <button type="submit" id="upd" class="btn btn-primary">Update</button>
-                        </center>
-                    </form> 
-                    <form id="updateBio" data-id="" class="" method="POST" action="">
-                        <div class="form-group">
-                            <label for="bio">Biography:</label>
-                            <textarea class="form-control" id="bio" rows="3"><?php
-                                    $sql = "SELECT * FROM my_account WHERE id=1";
-                                    $res = mysqli_query($conn, $sql);
-                                    
-                                    if (mysqli_num_rows($res) > 0) {
-                                        while ($row = mysqli_fetch_assoc($res)) {
-                                            echo $row["bio"];
-                                        }
+                            if (mysqli_num_rows($res) > 0) {
+                                while ($row = mysqli_fetch_assoc($res)) {
+                                    echo "<img src='../../img/" . $row["profile_img"] . "' class='img-fluid' alt='Rachel Le'>";
+                                }
+                                
+                            } 
+                        ?>
+                        <!--<img src="../../img/rach1.jpg" class="img-fluid" alt="Rachel Le"> -->
+                        <form id="updateProfImg" data-id="" class="" method="POST" action="" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="fileToUpload">Select image to upload:</label>
+                                <input type="file" name="fileToUpload" id="fileToUpload" required>
+                                <!--<input type="submit" value="Upload Image" name="submit">-->
+                            </div>
+                            <center>
+                                <button type="submit" id="upd" class="btn btn-primary">Update</button>
+                            </center>
+                        </form>
+                    </div>
+                    <div id="biog" class="hidden acct_form">
+                        <form id="updateBio" data-id="" class="" method="POST" action="">
+                            <div class="form-group">
+                                <label for="bio">Biography:</label>
+                                <textarea class="form-control" id="bio" rows="3"><?php
+                                        $sql = "SELECT * FROM my_account WHERE id=1";
+                                        $res = mysqli_query($conn, $sql);
                                         
-                                    } 
-                                ?></textarea>
-                        </div>
-                        <center>
-                            <button type="submit" id="updBio" class="btn btn-primary">Update</button>
-                        </center>
-                    </form> 
-                    <?php
-                        $sql = "SELECT * FROM my_account WHERE id=1";
-                        $res = mysqli_query($conn, $sql);
-                        
-                        if (mysqli_num_rows($res) > 0) {
-                            while ($row = mysqli_fetch_assoc($res)) {
-                                echo "<img src='../../img/" . $row["logo"] . "' class='img-fluid' alt='Rachel Le'>";
-                            }
+                                        if (mysqli_num_rows($res) > 0) {
+                                            while ($row = mysqli_fetch_assoc($res)) {
+                                                echo $row["bio"];
+                                            }
+                                            
+                                        } 
+                                    ?></textarea>
+                            </div>
+                            <center>
+                                <button type="submit" id="updBio" class="btn btn-primary">Update</button>
+                            </center>
+                        </form> 
+                    </div>
+                    <div id="site_logo" class="hidden acct_form">
+                        <?php
+                            $sql = "SELECT * FROM my_account WHERE id=1";
+                            $res = mysqli_query($conn, $sql);
                             
-                        } 
-                    ?>
-                    <form id="updateLogo" data-id="" class="" method="POST" action="" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="fileToUpload">Select image to upload:</label>
-                            <input type="file" name="fileToUpload" id="fileToUpload" required>
-                            <!--<input type="submit" value="Upload Image" name="submit">-->
-                        </div>
-                        <center>
-                            <button type="submit" id="updLo" class="btn btn-primary">Update</button>
-                        </center>
-                    </form> 
-                    <form id="updateBio" data-id="" class="" method="POST" action="">
-                        <div class="form-group">
+                            if (mysqli_num_rows($res) > 0) {
+                                while ($row = mysqli_fetch_assoc($res)) {
+                                    echo "<img src='../../img/" . $row["logo"] . "' class='img-fluid' alt='Rachel Le'>";
+                                }
+                                
+                            } 
+                        ?>
+                        <form id="updateLogo" data-id="" class="" method="POST" action="" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label for="pass">Enter new password:</label>
-                                <input type="password" class="form-control" id="pass" placeholder="Password">
+                                <label for="fileToUpload">Select image to upload:</label>
+                                <input type="file" name="fileToUpload" id="fileToUpload" required>
+                                <!--<input type="submit" value="Upload Image" name="submit">-->
                             </div>
-                        </div>
-                        <div class="form-group">
+                            <center>
+                                <button type="submit" id="updLo" class="btn btn-primary">Update</button>
+                            </center>
+                        </form> 
+                    </div>
+                    <div id="up_pass" class="hidden acct_form">
+                        <form id="updatePass" data-id="" class="" method="POST" action="">
                             <div class="form-group">
-                                <label for="pass">Enter new password again:</label>
-                                <input type="password" class="form-control" id="pass" placeholder="Password">
+                                <div class="form-group">
+                                    <label for="pass">Enter new password:</label>
+                                    <input type="password" class="form-control" id="pass" placeholder="Password">
+                                </div>
                             </div>
-                        </div>
-                        <center>
-                            <button type="submit" id="updBio" class="btn btn-primary">Update</button>
-                        </center>
-                    </form> 
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="pass">Enter new password again:</label>
+                                    <input type="password" class="form-control" id="pass" placeholder="Password">
+                                </div>
+                            </div>
+                            <center>
+                                <button type="submit" id="updBio" class="btn btn-primary">Update</button>
+                            </center>
+                        </form> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,6 +138,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script>
+        $('.sidebar-item').on('click', function(e) {
+            e.preventDefault();
+            $('.acct_form').addClass('hidden');
+            $('#' + $(this).attr('data-id')).removeClass('hidden');
+        });
+    
         $('#upd').on('click', function(e) {
             e.preventDefault();
             let formData = new FormData($("#updateProfImg")[0])
