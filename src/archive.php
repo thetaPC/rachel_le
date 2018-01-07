@@ -1,3 +1,9 @@
+<?php
+
+    include '../database/db_connection.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,67 +27,45 @@
     <?php include 'repeats/social.php'; ?>
     <?php include 'repeats/backtotop.html'; ?>
     
-    <div class="container-fluid arch-section">
+    <div class="container arch-section">
         <div clas="row">
-            <div class="col-md-2 offset-md-1">
-                <h2>Year</h2>
-                <h5>Month</h5>
+            <div class="col-md-12">
+                <?php
+                    $sql = "SELECT * FROM images ORDER BY year DESC, month DESC";
+                    
+                    $res = mysqli_query($conn, $sql);
+                    $year = 0;   
+                    $month = 0;
+                    
+                    if (mysqli_num_rows($res) > 0) {
+                        while ($row = mysqli_fetch_assoc($res)) {
+                            if ($year != $row['year']) {
+                                echo "<h2>" . $row['year'] . "</h2>";
+                                $year = $row['year'];
+                            }
+                            
+                            if ($month != $row['month']) {
+                                $monthNum  = (int)$row['month'];
+                                $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                                $monthName = $dateObj->format('F'); 
+                                echo "<h5>" . $monthName . "</h5>";
+                                $month = $row['month'];
+                            }
+                            
+                            echo "<div class='row'>
+                                    <div class='col-md-2_5 marg-b'>
+                                        <a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . "' href='../img/uploads/" . $row['file_name'] . "'>
+                                            <div class='resize'>
+                                              <img class='' src='../img/uploads/" . $row['file_name'] . "' alt='" . $row['name'] . "' /> 
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>";
+                        }
+                    }
+                ?>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-2 offset-md-1 marg-b">
-                <a class="a_img" data-fancybox="group" data-caption="Ciel" href="https://i.pinimg.com/736x/8f/5a/8a/8f5a8a338c4ca598a4dc8565dbd1b9b0.jpg">
-                    <div class="resize">
-                      <img class="" src="https://i.pinimg.com/736x/8f/5a/8a/8f5a8a338c4ca598a4dc8565dbd1b9b0.jpg" alt="" /> 
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2 marg-b">
-                <a class="a_img" data-fancybox="group" data-caption="Shun hearts you" href="https://i.pinimg.com/736x/8f/5a/8a/8f5a8a338c4ca598a4dc8565dbd1b9b0.jpg">
-                    <div class="resize">
-                      <img class="" src="https://i.pinimg.com/736x/8f/5a/8a/8f5a8a338c4ca598a4dc8565dbd1b9b0.jpg" alt="" /> 
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2 marg-b">
-                <a class="a_img" data-fancybox="group" data-caption="Shun hearts you" href="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg">
-                    <div class="resize">
-                      <img class="" src="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg" alt="" /> 
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2 marg-b">
-                <a class="a_img" data-fancybox="group" data-caption="Shun hearts you" href="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg">
-                    <div class="resize">
-                      <img class="" src="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg" alt="" /> 
-                    </div>
-                </a>
-            </div>
-             <div class="col-md-2 marg-b">
-                <a class="a_img" data-fancybox="group" data-caption="Shun hearts you" href="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg">
-                    <div class="resize">
-                      <img class="" src="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg" alt="" /> 
-                    </div>
-                </a>
-             </div>
-            <div class="col-md-2 offset-md-1 marg-b">
-                <a class="a_img" data-fancybox="group" data-caption="Shun hearts you" href="https://i.pinimg.com/736x/8f/5a/8a/8f5a8a338c4ca598a4dc8565dbd1b9b0.jpg">
-                    <div class="resize">
-                      <img class="" src="https://i.pinimg.com/736x/8f/5a/8a/8f5a8a338c4ca598a4dc8565dbd1b9b0.jpg" alt="" /> 
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2 marg-b">
-                <a class="a_img" data-fancybox="group" data-caption="Shun hearts you" href="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg">
-                    <div class="resize">
-                      <img class="" src="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg" alt="" /> 
-                    </div>
-                </a>
-            </div>
-        </div>
-        <?php
-            // SELECT * FROM gallery ORDER BY year desc, month desc;
-        ?>
     </div>
     
     
