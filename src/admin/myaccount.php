@@ -26,7 +26,7 @@
     <div class="container dash-section">
         <div class="col-md-12">
             <div class="page-header">
-                <a href=""><i class="fa fa-tachometer" aria-hidden="true"></i></a>
+                <a href="dashboard.php"><i class="fa fa-tachometer" aria-hidden="true"></i></a>
                 <h2>Hello, Rachel</h2>
             </div>
             <p class="lead"><a href="logout.php">Log out</a></p>
