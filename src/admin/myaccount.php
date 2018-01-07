@@ -48,7 +48,7 @@
                             
                             if (mysqli_num_rows($res) > 0) {
                                 while ($row = mysqli_fetch_assoc($res)) {
-                                    echo "<img src='../../img/" . $row["profile_img"] . "' class='img-fluid' alt='Rachel Le'>";
+                                    echo "<img id='pfl_pic' src='../../img/" . $row["profile_img"] . "' class='img-fluid' alt='Rachel Le'>";
                                 }
                                 
                             } 
@@ -57,7 +57,7 @@
                         <form id="updateProfImg" data-id="" class="" method="POST" action="" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="fileToUpload">Select image to upload:</label>
-                                <input type="file" name="fileToUpload" id="fileToUpload" required>
+                                <input type="file" class="filePrImg" name="fileToUpload" id="fileToUpload" required>
                                 <!--<input type="submit" value="Upload Image" name="submit">-->
                             </div>
                             <center>
@@ -93,7 +93,7 @@
                             
                             if (mysqli_num_rows($res) > 0) {
                                 while ($row = mysqli_fetch_assoc($res)) {
-                                    echo "<img src='../../img/" . $row["logo"] . "' class='img-fluid' alt='Rachel Le'>";
+                                    echo "<img id='pfl_logo' src='../../img/" . $row["logo"] . "' class='img-fluid' alt='Rachel Le'>";
                                 }
                                 
                             } 
@@ -101,7 +101,7 @@
                         <form id="updateLogo" data-id="" class="" method="POST" action="" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="fileToUpload">Select image to upload:</label>
-                                <input type="file" name="fileToUpload" id="fileToUpload" required>
+                                <input type="file" class="fileLogo" name="fileToUpload" id="fileToUpload" required>
                                 <!--<input type="submit" value="Upload Image" name="submit">-->
                             </div>
                             <center>
@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                             <center>
-                                <button type="submit" id="updBio" class="btn btn-primary">Update</button>
+                                <button type="submit" id="updPass" class="btn btn-primary">Update</button>
                             </center>
                         </form> 
                     </div>
@@ -146,7 +146,9 @@
     
         $('#upd').on('click', function(e) {
             e.preventDefault();
-            let formData = new FormData($("#updateProfImg")[0])
+            let formData = new FormData($("#updateProfImg")[0]);
+            formData.append('column', 'profile_img');
+            formData.append('table', 'my_account');
             $.ajax({
                 type: "POST",
                 url: "update_img.php",
@@ -159,7 +161,79 @@
                     
                 },
                   complete: function(data,status) { //optional, used for debugging purposes
-                  console.log('done');
+                //   console.log('done');
+                    $('#pfl_pic').attr('src', '../../img' + $('.filePrImg').val().substring(11));
+                    $('.filePrImg').val('');
+                    $('.acct_form').addClass('hidden');
+                }
+            });//AJAX 
+        });
+        
+        $('#updLo').on('click', function(e) {
+            e.preventDefault();
+            let formData = new FormData($("#updateLogo")[0]);
+            formData.append('column', 'logo');
+            formData.append('table', 'my_account');
+            $.ajax({
+                type: "POST",
+                url: "update_img.php",
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function(data,status) {
+                    // alert("ADDED!");
+                    
+                },
+                  complete: function(data,status) { //optional, used for debugging purposes
+                //   console.log('done');
+                    $('#pfl_logo').attr('src', '../../img' + $('.fileLogo').val().substring(11));
+                    $('.fileLogo').val('');
+                    $('.acct_form').addClass('hidden');
+                }
+            });//AJAX 
+        });
+        
+        $('#updBio').on('click', function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "update_text.php",
+                dataType: "json",
+                data: {
+                    "column": "bio",
+                    "new_text": $('#bio').val(),
+                    "table": "my_account",
+                },
+                success: function(data,status) {
+                    // alert("ADDED!");
+                    
+                },
+                  complete: function(data,status) { //optional, used for debugging purposes
+                //   console.log('done');
+                    $('.acct_form').addClass('hidden');
+                }
+            });//AJAX 
+        });
+        
+        $('#updPass').on('click', function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "update_text.php",
+                dataType: "json",
+                data: {
+                    "column": "pass",
+                    "new_text": $('#bio').val(),
+                    "table": "my_account",
+                },
+                success: function(data,status) {
+                    // alert("ADDED!");
+                    
+                },
+                  complete: function(data,status) { //optional, used for debugging purposes
+                //   console.log('done');
+                    $('.acct_form').addClass('hidden');
                 }
             });//AJAX 
         });
