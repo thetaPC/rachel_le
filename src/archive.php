@@ -36,6 +36,7 @@
                     $res = mysqli_query($conn, $sql);
                     $year = 0;   
                     $month = 0;
+                    $flag = false;
                     
                     if (mysqli_num_rows($res) > 0) {
                         while ($row = mysqli_fetch_assoc($res)) {
@@ -50,17 +51,30 @@
                                 $monthName = $dateObj->format('F'); 
                                 echo "<h5>" . $monthName . "</h5>";
                                 $month = $row['month'];
-                            }
                             
-                            echo "<div class='row'>
-                                    <div class='col-md-2_5 marg-b'>
-                                        <a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . "' href='../img/uploads/" . $row['file_name'] . "'>
-                                            <div class='resize'>
-                                              <img class='' src='../img/uploads/" . $row['file_name'] . "' alt='" . $row['name'] . "' /> 
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>";
+                            
+                                $sql1 = "SELECT * FROM images where year=" . $row['year'] . " AND month=" . $row['month'] . " ORDER BY year DESC, month DESC";
+                                
+                                $res1 = mysqli_query($conn, $sql1);
+                                
+                                echo "<div class='row'>";
+                                
+                                if (mysqli_num_rows($res1) > 0) {
+                                    while ($row1 = mysqli_fetch_assoc($res1)) {
+                                        echo "<div class='col-md-2_5 marg-b'>
+                                            <a class='a_img' data-fancybox='group' data-caption='" . $row1['name'] . "' href='../img/uploads/" . $row1['file_name'] . "'>
+                                                <div class='resize'>
+                                                  <img class='' src='../img/uploads/" . $row1['file_name'] . "' alt='" . $row1['name'] . "' /> 
+                                                </div>
+                                            </a>
+                                        </div>";
+                                    }
+                                }
+                                
+                                echo "</div>";
+                            
+                            } 
+                                
                         }
                     }
                 ?>
