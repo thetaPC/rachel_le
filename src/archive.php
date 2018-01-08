@@ -57,14 +57,14 @@
                                 
                                 $res1 = mysqli_query($conn, $sql1);
                                 
-                                echo "<div class='row'>";
+                                echo "<div class='row arc_img'>";
                                 
                                 if (mysqli_num_rows($res1) > 0) {
                                     while ($row1 = mysqli_fetch_assoc($res1)) {
                                         echo "<div class='col-md-2_5 marg-b'>
                                             <a class='a_img' data-fancybox='group' data-caption='" . $row1['name'] . "' href='../img/uploads/" . $row1['file_name'] . "'>
                                                 <div class='resize'>
-                                                  <img class='' src='../img/uploads/" . $row1['file_name'] . "' alt='" . $row1['name'] . "' /> 
+                                                  <img class='img-thumbnail' src='../img/uploads/" . $row1['file_name'] . "' alt='" . $row1['name'] . "' /> 
                                                 </div>
                                             </a>
                                         </div>";

@@ -6,14 +6,36 @@
     margin-bottom: 30px;
 }
 
-.col-md-2_5 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 20%;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%;
-    padding-right: 15px;
-    padding-left: 15px;
+@media (min-width: 576px) {
+    .col-md-2_5 {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-2_5 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media only screen and (min-width: 1200px)  {
+    
+   .resize {
+       /*undo the next 3 lines for how to get back to hidden overlapped images and get rid of img-thumbnail*/
+        /*height: 250px; */
+        /*width: 100%; */
+        /*overflow: hidden;*/
+        /*margin-bottom: 17px;*/
+        padding-bottom: 15px;
+    }         
+
 }
 
 /*@media only screen and (max-width: 1200px) and (min-width: 992px)  {*/
@@ -126,14 +148,3 @@
 
 /*}*/
 
-@media only screen and (min-width: 1200px)  {
-    
-   .resize {
-        height: 250px; 
-        width: 100%; 
-        overflow: hidden;
-        /*margin-bottom: 17px;*/
-        padding-bottom: 15px;
-    }         
-
-}
