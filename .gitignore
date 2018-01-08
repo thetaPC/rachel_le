@@ -6,3 +6,4 @@ src/admin/dashboard.php
 src/admin/edit.php
 src/admin/insert.php
 src/admin/myaccount.php
+src/admin/update_text.php
