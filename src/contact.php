@@ -28,28 +28,28 @@
 		</div>
 		<div class="contact-section">
 			<div class="container">
-				<form>
+				<form id="contactForm">
 				    <div class="row">
-                        <div class="col-md-6 form-line">
+                <div class="col-md-6 form-line">
     			  			<div class="form-group">
     			  				<label for="name">Your name</label>
-    					    	<input type="text" class="form-control" id="name" placeholder="Enter name" required>
+    					    	<input type="text" name="name" class="form-control" id="name" placeholder="Enter name" required>
     				  		</div>
     				  		<div class="form-group">
     					    	<label for="email">Email Address</label>
-    					    	<input type="email" class="form-control" id="email" placeholder="Enter email" required>
+    					    	<input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
     					  	</div>	
     					  	<div class="form-group">
     					    	<label for="telephone">Phone No.</label>
-    					    	<input type="tel" class="form-control" id="telephone" placeholder="Enter phone number">
+    					    	<input type="tel" name="tel" class="form-control" id="telephone" placeholder="Enter phone number">
     			  			</div>
 			  		    </div>
     			  		<div class="col-md-6">
     			  			<div class="form-group">
-    			  				<label for="description">Message</label>
-    			  			 	<textarea class="form-control" id="description" placeholder="Enter Your Message" required></textarea>
+    			  				<label for="msg">Message</label>
+    			  			 	<textarea class="form-control" name="msg" id="msg" placeholder="Enter Your Message" required></textarea>
     			  			</div>
-    			  			<button type="submit" class="btn btn-outline-secondary submit">
+    			  			<button id="contSub" type="submit" class="btn btn-outline-secondary submit">
     			  			    <i class="fa fa-paper-plane" aria-hidden="true"></i>
     			  			    Send Message
 			  			    </button>
@@ -62,8 +62,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-      
-    <script type="text/javascript" src="../js/slack.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script>
+      $('#contSub').on('click', function(e) {
+        e.preventDefault();
+        if ($('#contactForm').valid()) {
+          console.log('send msg');
+        }
+      });
     </script>
   </body>
 </html>
