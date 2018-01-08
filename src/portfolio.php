@@ -1,3 +1,9 @@
+<?php
+
+    include '../database/db_connection.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -160,6 +166,24 @@
             </div>
           </a>
         </div>
+        <?php
+          $sql = "SELECT * FROM images";
+                                
+          $res = mysqli_query($conn, $sql);
+          
+          if (mysqli_num_rows($res) > 0) {
+              while ($row = mysqli_fetch_assoc($res)) {
+                  echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4'>     
+                          <a class='a_img' data-fancybox='group' data-caption='" . $row['description'] . "' href='../img/uploads/" . $row['file_name'] . "'>
+                            <div class='resize'>
+                              <img class='' src='../img/uploads/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
+                            </div>
+                          </a>
+                        </div>";
+              }
+          }
+        
+        ?>
       </div>
     </div> 
 
