@@ -3,7 +3,13 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="/v2_rachel/index.php">
-    <img class="logo" src="/v2_rachel/img/rachel_logo.PNG">
+    <?php
+      $sql = "SELECT logo FROM my_account WHERE id=1";
+      $res = mysqli_query($conn, $sql);
+      while ($row = mysqli_fetch_assoc($res)) {
+          echo "<img id='navbarLogo' class='logo' src='/v2_rachel/img/" . $row['logo'] . "'>";
+      }
+    ?>
   </a>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
