@@ -1,3 +1,9 @@
+<?php
+
+    include '../database/db_connection.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,14 +29,33 @@
     <div class="container about-section">
         <div class="row justify-content-between">
             <div class="col-md-4">
-                 <img src="../img/rach1.jpg" class="rounded-circle img-fluid img-thumbnail" alt="Rachel Le"> 
+                <?php
+                    $sql = "SELECT * FROM my_account where id=1";
+                    
+                    $res = mysqli_query($conn, $sql);
+                    
+                    if (mysqli_num_rows($res) > 0) {
+                        while ($row = mysqli_fetch_assoc($res)) {
+                            echo "<img src='../img/" . $row['profile_img'] . "' class='rounded-circle img-fluid img-thumbnail' alt='Rachel Le'>";
+                            // echo "<img src='../img/" . $row['profile_img'] . "' class='rounded img-fluid img-thumbnail' alt='Rachel Le'>";
+                            // echo "<img src='../img/" . $row['profile_img'] . "' class='rounded-circle img-fluid' alt='Rachel Le'>";
+                        }
+                    }
+                ?>
             </div>
             <div class="col-md-7">
                 <h3>Rachel Le</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel lectus felis. Vestibulum molestie, tellus ut venenatis placerat, arcu felis varius eros, ac auctor nibh est ut mi. Nulla facilisi. Nullam commodo varius nisl sit amet lacinia. Pellentesque ac ultricies velit. Vestibulum ut enim blandit, mollis lacus sed, varius dolor. Integer vel velit congue, tincidunt justo ultricies, accumsan ex. Mauris dictum ultricies elit non ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque molestie elit sed ipsum rutrum efficitur. Nunc ac arcu odio. Mauris hendrerit at massa in congue. Sed ullamcorper est sem, nec condimentum lectus tempus ac. Morbi pulvinar hendrerit tortor, vel laoreet libero tristique et. Praesent eget efficitur metus. Nunc a mattis lacus. 
-                </p>
-            </div>
+                <?php
+                    $sql = "SELECT * FROM my_account where id=1";
+                    
+                    $res = mysqli_query($conn, $sql);
+                    
+                    if (mysqli_num_rows($res) > 0) {
+                        while ($row = mysqli_fetch_assoc($res)) {
+                            echo "<p>" . $row['bio'] . "</p>";
+                        }
+                    }
+                ?>
         </div>
     </div>
 
