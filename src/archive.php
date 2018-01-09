@@ -113,7 +113,7 @@
                                         echo "<div class='col-md-2_5 marg-b'>
                                             <a class='a_img' data-fancybox='group' data-caption='" . $row1['name'] . "' href='../img/uploads/" . $row1['file_name'] . "'>
                                                 <div class='resize'>
-                                                  <img class='img-thumbnail' src='../img/uploads/" . $row1['file_name'] . "' alt='" . $row1['name'] . "' /> 
+                                                  <img id='" . $row['id'] . "' class='arc-img img-thumbnail' src='../img/uploads/" . $row1['file_name'] . "' alt='" . $row1['name'] . "' /> 
                                                 </div>
                                             </a>
                                         </div>";
@@ -157,6 +157,24 @@
                   }, 'slow');
               }
             }
+        });
+        
+        $(".arc-img").on("click", function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "admin/clicks.php",
+                dataType: "json",
+                data: {
+                    "id": $(this).attr('id'),
+                },
+                success: function(data,status) {
+                // alert("ADDED!");
+                },
+                complete: function(data,status) { //optional, used for debugging purposes
+                //alert(status);
+                }
+            });//AJAX 
         });
     </script>
   </body>
