@@ -57,7 +57,7 @@
     			  			</div>
     			  			<button id="contSub" type="submit" class="btn btn-outline-secondary submit">
     			  			    <i class="fa fa-paper-plane" aria-hidden="true"></i>
-    			  			    Send Message
+    			  			    Send
 			  			    </button>
     					</div>
 					</div>
