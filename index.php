@@ -1,3 +1,17 @@
+<?php
+    
+    include 'database/db_connection.php';
+    
+    $sql = "UPDATE visits SET total=  total + 1 where id= 1";
+
+    if (mysqli_query($conn, $sql)) {
+        // echo "Record updated successfully";
+    } else {
+        // echo "Error updating record: " . mysqli_error($conn);
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,15 +22,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/social.css">
-    <link rel="stylesheet" href="../css/carousel.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/carousel.css">
   </head>
 
   <body>
 
-    <?php include 'repeats/navbar.php'; ?>
-    <?php include 'repeats/social.php'; ?>
+    <?php include 'src/repeats/navbar.php'; ?>
+    <?php include 'src/repeats/social.php'; ?>
     
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
