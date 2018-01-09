@@ -26,5 +26,4 @@ $(window).resize(function() {
         $('#scrollup').remove();
         $('#return-to-top').append("<i id='scrollup' class='fa fa-chevron-up' aria-hidden='true'></i>");
     }
-    console.log('now');
 });
