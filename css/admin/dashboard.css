@@ -145,11 +145,20 @@
     transform: translate(-50%, -50%);
 }
 
-.visits h, .popular h {
+.popular h {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.visits h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: 700;
 }
 
 .parent {
@@ -161,4 +170,8 @@
 
 .m-bot {
     margin-bottom: 25px;
+}
+
+.popular {
+    margin-top: 15px;
 }
