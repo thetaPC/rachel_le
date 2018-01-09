@@ -38,17 +38,44 @@
             <h4 class="intro-text">Hello! Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Ut eu. -Rachel Le</h4>
         </div>
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <?php
+            $sql = "SELECT count(*) as count FROM images where slideshow=1";
+                                  
+            $res = mysqli_query($conn, $sql);
+            
+            if (mysqli_num_rows($res) > 0) {
+                while ($row = mysqli_fetch_assoc($res)) {
+                  for ($x = 0; $x < $row['count']; $x++) {
+                      if ($x == 0) {
+                        echo "<li  class='active' data-target='#carouselExampleIndicators' data-slide-to='" . $x . "'></li>";
+                      } else {
+                        echo "<li data-target='#carouselExampleIndicators' data-slide-to='" . $x . "'></li>";
+                      }
+                  } 
+                }
+            }
+          ?>
         </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active" style="background-image: url('https://img00.deviantart.net/af3f/i/2016/316/5/c/victor_nikiforov_by_sketch_and_smile-dao7jie.jpg')">
-          </div>
-        <div class="carousel-item" style="background-image: url('https://img00.deviantart.net/c4a6/i/2016/032/8/1/extra_by_sketch_and_smile-d9q74x1.png')">
-          </div>
-          <div class="carousel-item" style="background-image: url('https://orig00.deviantart.net/6c91/f/2016/128/f/f/flowers_galore_by_sketch_and_smile-da1srvt.jpg')">
-          </div>
+          <?php
+            $sql = "SELECT * FROM images where slideshow=1";
+                                  
+            $res = mysqli_query($conn, $sql);
+            
+            $first = true;
+            
+            if (mysqli_num_rows($res) > 0) {
+                while ($row = mysqli_fetch_assoc($res)) {
+                    if ($first) {
+                      echo '<div class="carousel-item active" style="background-image: url(\'img/uploads/' . $row['file_name'] . '\');"></div>';
+                      $first = false;
+                    } else {
+                      echo '<div class="carousel-item" style="background-image: url(\'img/uploads/' . $row['file_name'] . '\');"></div>';
+                    }
+                }
+            }
+          
+          ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
