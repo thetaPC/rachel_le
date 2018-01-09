@@ -59,7 +59,7 @@
                   echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4 smaller'>     
                           <a class='a_img' data-fancybox='group' data-caption='" . $row['description'] . "' href='../img/uploads/" . $row['file_name'] . "'>
                             <div class='resize'>
-                              <img class='' src='../img/uploads/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
+                              <img id='" . $row['id'] . "' class='port-img' src='../img/uploads/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
                             </div>
                           </a>
                         </div>";
@@ -103,6 +103,24 @@
       $('.art-categories').on('click', function() {
         $('.art-categories').removeClass('dotted');
         $(this).addClass('dotted');
+      });
+      
+      $(".port-img").on("click", function (e) {
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "admin/clicks.php",
+          dataType: "json",
+          data: {
+            "id": $(this).attr('id'),
+          },
+          success: function(data,status) {
+          // alert("ADDED!");
+          },
+          complete: function(data,status) { //optional, used for debugging purposes
+          //alert(status);
+          }
+        });//AJAX 
       });
       
     </script>
