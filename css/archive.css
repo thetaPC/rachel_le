@@ -6,6 +6,19 @@
     margin-bottom: 30px;
 }
 
+.marg-r3 {
+    margin-right: 3px;
+}
+
+.marg-r15 {
+    margin-right: 15px;
+}
+
+.btn-circle {
+    border-radius: 100%;
+    padding: 10px !important;
+}
+
 @media (min-width: 576px) {
     .col-md-2_5 {
         padding-right: 15px;

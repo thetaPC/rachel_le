@@ -28,6 +28,55 @@
     <?php include 'repeats/backtotop.html'; ?>
     
     <div class="container arch-section">
+        <div class="row justify-content-end">
+            <div class="col-md-5">
+                <form id="filterForm" class="form-inline">
+                    <div class="form-group marg-r15">
+                        <label class="marg-r3" for="month">Month</label>
+                        <select id="month" class="custom-select" required name="month">
+                            <option selected value="">Select...</option>
+                            <?php
+                                $sql = "SELECT DISTINCT month FROM images ORDER BY month ASC";
+                                
+                                $res = mysqli_query($conn, $sql);
+                                
+                                if (mysqli_num_rows($res) > 0) {
+                                    while ($row = mysqli_fetch_assoc($res)) {
+                                        $monthNum  = (int)$row['month'];
+                                        $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                                        $monthName = $dateObj->format('F'); 
+                                        echo "<option value='" . $monthName ."'>" . $monthName . "</option>";
+                                    }
+                                }
+                    
+                            ?>
+                        </select>
+                    </div>
+                    <div class="form-group marg-r15">
+                        <label class="marg-r3" for="year">Year</label>
+                        <select id="year" class="custom-select" required name="year">
+                            <option selected value="">Select...</option>
+                            <?php
+                                $sql = "SELECT DISTINCT year FROM images ORDER BY year DESC";
+                                
+                                $res = mysqli_query($conn, $sql);
+                                
+                                if (mysqli_num_rows($res) > 0) {
+                                    while ($row = mysqli_fetch_assoc($res)) {
+                                        echo "<option value='" . $row['year'] ."'>" . $row['year'] . "</option>";
+                                    }
+                                }
+                    
+                            ?>
+                        </select>
+                    </div>
+                    <button id="filter" type="submit" class="btn btn-primary btn-circle">Go</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
         <div clas="row">
             <div class="col-md-12">
                 <?php
@@ -49,7 +98,7 @@
                                 $monthNum  = (int)$row['month'];
                                 $dateObj   = DateTime::createFromFormat('!m', $monthNum);
                                 $monthName = $dateObj->format('F'); 
-                                echo "<h5>" . $monthName . "</h5>";
+                                echo "<h5 class='" . $monthName . $year . "'>" . $monthName . "</h5>";
                                 $month = $row['month'];
                             
                             
@@ -87,6 +136,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="../js/fancybox/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="../js/btt.js"></script>
     
     <script>
@@ -97,6 +147,17 @@
       		animationEffect : "zoom-in-out",
       	});
       });
+
+        $('#filter').on('click', function(e) {
+            e.preventDefault();
+            if ($('#month').val().trim() != '' && $('#year').val().trim() != '') {
+              if ($('h5').hasClass($('#month').val().trim() + $('#year').val().trim())) {
+                  $('html, body').animate({
+                    scrollTop: $('.' + $('#month').val().trim() + $('#year').val().trim()).offset().top,
+                  }, 'slow');
+              }
+            }
+        });
     </script>
   </body>
 </html>
