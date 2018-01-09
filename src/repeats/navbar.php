@@ -4,6 +4,7 @@
   </button>
   <a class="navbar-brand" href="/v2_rachel/index.php">
     <?php
+      
       $sql = "SELECT logo FROM my_account WHERE id=1";
       $res = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($res)) {
