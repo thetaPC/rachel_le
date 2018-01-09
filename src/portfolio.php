@@ -31,17 +31,19 @@
     
     <div class="container port-section">
       <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <hr>
-            <button class="art-categories fil-cat" href="" data-rel="all">All</button>
-            <span>/</span>
-            <button class="art-categories fil-cat" data-rel="digital">Digital</button>
-            <span>/</span>
-            <button class="art-categories fil-cat" data-rel="abstract">Abstract</button>
-            <span>/</span>
-            <button class="art-categories fil-cat" data-rel="traditional">Traditional</button>
-            <span>/</span>
-            <button class="art-categories fil-cat" data-rel="logos">Logos</button>
+            <center>
+              <button class="art-categories fil-cat" href="" data-rel="all">All</button>
+              <span>/</span>
+              <button class="art-categories fil-cat" data-rel="digital">Digital</button>
+              <span>/</span>
+              <button class="art-categories fil-cat" data-rel="abstract">Abstract</button>
+              <span>/</span>
+              <button class="art-categories fil-cat" data-rel="traditional">Traditional</button>
+              <span>/</span>
+              <button class="art-categories fil-cat" data-rel="logos">Logos</button>
+            </center>
           <hr>
         </div>
       </div>
@@ -54,7 +56,7 @@
           
           if (mysqli_num_rows($res) > 0) {
               while ($row = mysqli_fetch_assoc($res)) {
-                  echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4 col-sm-1'>     
+                  echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4 smaller'>     
                           <a class='a_img' data-fancybox='group' data-caption='" . $row['description'] . "' href='../img/uploads/" . $row['file_name'] . "'>
                             <div class='resize'>
                               <img class='' src='../img/uploads/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
