@@ -42,3 +42,10 @@
     color: #fff;
     top: 5px;
 }
+
+.shrink {
+    width: 50%;
+    height: 50%;
+    margin-left: 26%;
+    margin-top: 22%;
+}

@@ -15,13 +15,13 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 
 if($(window).width() <= 683) {
     $('#scrollup').remove();
-    $('#return-to-top').append("<img src='../img/up.png' />");
+    $('#return-to-top').append("<img id='scrollup' class='shrink' src='../img/up.png' />");
 } 
 
 $(window).resize(function() {
     if($(window).width() <= 683) {
         $('#scrollup').remove()
-        $('#return-to-top').append("<img id='scrollup' src='../img/up.png' />");
+        $('#return-to-top').append("<img id='scrollup' class='shrink' src='../img/up.png' />");
     }  else {
         $('#scrollup').remove();
         $('#return-to-top').append("<i id='scrollup' class='fa fa-chevron-up' aria-hidden='true'></i>");

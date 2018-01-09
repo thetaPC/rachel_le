@@ -47,125 +47,6 @@
       </div>
       
       <div id="portfolio" class="row">
-        <div class="tile scale-anm digital all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Single yet not Lonely" href="https://pre00.deviantart.net/4129/th/pre/i/2016/051/7/f/single_yet_not_lonely_by_sketch_and_smile-d9sitn9.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/4129/th/pre/i/2016/051/7/f/single_yet_not_lonely_by_sketch_and_smile-d9sitn9.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm abstract all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Yourself" href="https://pre00.deviantart.net/3dd4/th/pre/f/2015/271/f/0/20150716_130550_1_by_sketch_and_smile-d9b9q5v.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/3dd4/th/pre/f/2015/271/f/0/20150716_130550_1_by_sketch_and_smile-d9b9q5v.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm digital all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Surprise" href="https://pre00.deviantart.net/7021/th/pre/i/2015/271/0/5/surprise_by_sketch_and_smile-d9bagjq.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/7021/th/pre/i/2015/271/0/5/surprise_by_sketch_and_smile-d9bagjq.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm digital all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Surprise 2.0" href="https://pre00.deviantart.net/fc2b/th/pre/i/2015/271/8/e/surprise_2_0_by_sketch_and_smile-d9bai14.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/fc2b/th/pre/i/2015/271/8/e/surprise_2_0_by_sketch_and_smile-d9bai14.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm traditional all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Mutsumi Senpai" href="https://pre00.deviantart.net/96d3/th/pre/f/2016/316/5/8/2_by_sketch_and_smile-dao7llk.jpg">
-            <div class="resize">
-              <img class=""src="https://pre00.deviantart.net/96d3/th/pre/f/2016/316/5/8/2_by_sketch_and_smile-dao7llk.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm abstract all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Struggle" href="https://pre00.deviantart.net/aed2/th/pre/f/2015/271/e/4/struggle_by_sketch_and_smile-d9b9jhp.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/aed2/th/pre/f/2015/271/e/4/struggle_by_sketch_and_smile-d9b9jhp.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm traditional all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Sunakawa Sunshine" href="https://img00.deviantart.net/2535/i/2016/100/a/a/sunakawa_sunshine_by_sketch_and_smile-d9yhtdz.jpg">
-            <div class="resize">
-              <img class="" src="https://img00.deviantart.net/2535/i/2016/100/a/a/sunakawa_sunshine_by_sketch_and_smile-d9yhtdz.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm traditional all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="707" href="https://pre00.deviantart.net/1aa7/th/pre/i/2016/316/2/2/707_by_sketch_and_smile-dao7jwh.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/1aa7/th/pre/i/2016/316/2/2/707_by_sketch_and_smile-dao7jwh.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm logos all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Simply Mine" href="https://pre00.deviantart.net/ce34/th/pre/i/2016/045/0/0/simply_mine_by_sketch_and_smile-d9rtb5a.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/ce34/th/pre/i/2016/045/0/0/simply_mine_by_sketch_and_smile-d9rtb5a.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm traditional all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Shun hearts you" href="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/7122/th/pre/i/2016/220/b/c/shun_hearts_you_by_sketch_and_smile-dad6gfd.jpg" alt="" /> 
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm logos all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Dreaming Mermaid" href="https://pre00.deviantart.net/c40a/th/pre/i/2016/085/6/f/dreaming_mermaid_by_sketch_and_smile-d9wmctc.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/c40a/th/pre/i/2016/085/6/f/dreaming_mermaid_by_sketch_and_smile-d9wmctc.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm abstract all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Effect" href="https://pre00.deviantart.net/064e/th/pre/f/2015/271/1/c/20150716_125734_1___copy_by_sketch_and_smile-d9b9lf5.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/064e/th/pre/f/2015/271/1/c/20150716_125734_1___copy_by_sketch_and_smile-d9b9lf5.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm logos all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="flowers galore" href="https://orig00.deviantart.net/6c91/f/2016/128/f/f/flowers_galore_by_sketch_and_smile-da1srvt.jpg">
-            <div class="resize">
-              <img class="" src="https://orig00.deviantart.net/6c91/f/2016/128/f/f/flowers_galore_by_sketch_and_smile-da1srvt.jpg" alt="" />
-            </div> 
-          </a>
-        </div>
-        <div class="tile scale-anm abstract all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="End" href="https://pre00.deviantart.net/f3f1/th/pre/f/2015/271/4/e/20150716_130058_1___copy_by_sketch_and_smile-d9b9nve.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/f3f1/th/pre/f/2015/271/4/e/20150716_130058_1___copy_by_sketch_and_smile-d9b9nve.jpg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="tile scale-anm logos all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="Flower Explosion" href="https://img00.deviantart.net/0da6/i/2016/032/c/5/flower_explosion_by_sketch_and_smile-d9q74kw.png">
-            <div class="resize">
-              <img class="" src="https://img00.deviantart.net/0da6/i/2016/032/c/5/flower_explosion_by_sketch_and_smile-d9q74kw.png" alt="" />
-            </div>
-          </a>
-        </div> 
-        <div class="tile scale-anm logos all col-md-4">
-          <a class="a_img" data-fancybox="group" data-caption="magical flow" href="https://pre00.deviantart.net/c388/th/pre/i/2016/073/9/2/magical_flow_by_sketch_and_smile-d9v5jyv.jpg">
-            <div class="resize">
-              <img class="" src="https://pre00.deviantart.net/c388/th/pre/i/2016/073/9/2/magical_flow_by_sketch_and_smile-d9v5jyv.jpg" alt="" />  
-            </div>
-          </a>
-        </div> 
-        <div class="tile scale-anm abstract all col-md-4">     
-          <a class="a_img" data-fancybox="group" data-caption="Exit" href="https://img00.deviantart.net/c46f/i/2015/271/d/5/exit_by_sketch_and_smile-d9baoc2.jpg">
-            <div class="resize">
-              <img class="" src="https://img00.deviantart.net/c46f/i/2015/271/d/5/exit_by_sketch_and_smile-d9baoc2.jpg" alt="" />
-            </div>
-          </a>
-        </div>
         <?php
           $sql = "SELECT * FROM images";
                                 
@@ -173,7 +54,7 @@
           
           if (mysqli_num_rows($res) > 0) {
               while ($row = mysqli_fetch_assoc($res)) {
-                  echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4'>     
+                  echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4 col-sm-1'>     
                           <a class='a_img' data-fancybox='group' data-caption='" . $row['description'] . "' href='../img/uploads/" . $row['file_name'] . "'>
                             <div class='resize'>
                               <img class='' src='../img/uploads/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
