@@ -57,9 +57,9 @@
           if (mysqli_num_rows($res) > 0) {
               while ($row = mysqli_fetch_assoc($res)) {
                   echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4 smaller'>     
-                          <a class='a_img' data-fancybox='group' data-caption='" . $row['description'] . "' href='../img/uploads/" . $row['file_name'] . "'>
+                          <a class='a_img' data-fancybox='group' data-caption='" . $row['description'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>
                             <div class='resize'>
-                              <img id='" . $row['id'] . "' class='port-img' src='../img/uploads/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
+                              <img id='" . $row['id'] . "' class='port-img' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
                             </div>
                           </a>
                         </div>";

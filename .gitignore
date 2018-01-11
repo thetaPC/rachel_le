@@ -7,3 +7,5 @@ src/admin/edit.php
 src/admin/insert.php
 src/admin/myaccount.php
 src/admin/update_text.php
+Cloudinary_API/
+src/admin/upload.php

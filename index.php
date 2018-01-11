@@ -67,10 +67,10 @@
             if (mysqli_num_rows($res) > 0) {
                 while ($row = mysqli_fetch_assoc($res)) {
                     if ($first) {
-                      echo '<div class="carousel-item active" style="background-image: url(\'img/uploads/' . $row['file_name'] . '\');"></div>';
+                      echo '<div class="carousel-item active" style="background-image: url(\'https://res.cloudinary.com/htqimzujb/image/upload/' . $row['file_name'] . '\');"></div>';
                       $first = false;
                     } else {
-                      echo '<div class="carousel-item" style="background-image: url(\'img/uploads/' . $row['file_name'] . '\');"></div>';
+                      echo '<div class="carousel-item" style="background-image: url(\'https://res.cloudinary.com/htqimzujb/image/upload/' . $row['file_name'] . '\');"></div>';
                     }
                 }
             }
