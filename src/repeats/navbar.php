@@ -8,7 +8,7 @@
       $sql = "SELECT logo FROM my_account WHERE id=1";
       $res = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($res)) {
-          echo "<img id='navbarLogo' class='logo' src='/v2_rachel/img/" . $row['logo'] . "'>";
+          echo "<img id='navbarLogo' class='logo' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['logo'] . "'>";
       }
     ?>
   </a>
