@@ -43,7 +43,6 @@
   <body>
 
     <?php include 'src/repeats/navbar.php'; ?>
-    <?php include 'src/repeats/social.php'; ?>
     
 
     <div id="login" class="login-section">
