@@ -55,26 +55,25 @@
                     <h2>Admin Login</h2>
                 </div>
             </div>
-        <div class="row justify-content-center">
-            <div class="col-5">
-                <form method="POST" action="">
-                    <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" name="username" class="form-control" id="username">
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Password:</label>
-                        <input type="password" name="pwd" class="form-control" id="pwd">
-                    </div>
-                    <div class="form-group row justify-content-center">
-                        <div class="col-md-3">
-                            <button type="submit" class="btn btn-primary">Sign in</button>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <form method="POST" action="">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" class="form-control" id="username">
                         </div>
-                    </div>
-                </form> 
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" name="pwd" class="form-control" id="pwd">
+                        </div>
+                        <div class="form-group row justify-content-center">
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                        </div>
+                    </form> 
+                </div>
             </div>
-        </div>
-        
         </div>
     </div>
 
@@ -82,8 +81,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-    <script>
-    
-    </script>
   </body>
 </html>

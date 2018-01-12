@@ -13,16 +13,16 @@ $('#return-to-top').click(function() {      // When arrow is clicked
     }, 500);
 });
 
-if($(window).width() <= 683) {
+if ($(window).width() <= 683) {
     $('#scrollup').remove();
     $('#return-to-top').append("<img id='scrollup' class='shrink' src='../img/required/up.png' />");
 } 
 
 $(window).resize(function() {
-    if($(window).width() <= 683) {
+    if ($(window).width() <= 683) {
         $('#scrollup').remove()
         $('#return-to-top').append("<img id='scrollup' class='shrink' src='../img/required/up.png' />");
-    }  else {
+    } else {
         $('#scrollup').remove();
         $('#return-to-top').append("<i id='scrollup' class='fa fa-chevron-up' aria-hidden='true'></i>");
     }

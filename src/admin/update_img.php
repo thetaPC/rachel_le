@@ -36,13 +36,11 @@
         // echo "Sorry, your file was not uploaded.";
     } else {
         $res = \Cloudinary\Uploader::upload($_FILES["fileToUpload"]["tmp_name"]);
-        // echo (string)$res['public_id'];
         
         $sql = "UPDATE " . $_POST['table'] . " SET " . $_POST['column'] . "='" . (string)$res['public_id'] . "' WHERE id=1";
 
         if (mysqli_query($conn, $sql)) {
             // echo "Record updated successfully";
-            // echo $old_img;
             \Cloudinary\Uploader::destroy($old_img);
             header('Content-Type: application/json');
             echo json_encode(array('newImgName' => (string)$res['public_id']));

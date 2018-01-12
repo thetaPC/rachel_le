@@ -115,10 +115,10 @@
             "id": $(this).attr('id'),
           },
           success: function(data,status) {
-          // alert("ADDED!");
+            
           },
           complete: function(data,status) { //optional, used for debugging purposes
-          //alert(status);
+            
           }
         });//AJAX 
       });

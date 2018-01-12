@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/social.css">
     <link rel="stylesheet" href="../css/about.css">
-    
   </head>
 
   <body class="bg-color">
