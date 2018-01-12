@@ -65,7 +65,6 @@
                         </div>";
               }
           }
-        
         ?>
       </div>
     </div> 
@@ -97,7 +96,6 @@
               $("#portfolio").fadeTo(300, 1);
             }, 300); 
       	});
-      	
       });
       
       $('.art-categories').on('click', function() {

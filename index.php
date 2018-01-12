@@ -44,15 +44,15 @@
             $res = mysqli_query($conn, $sql);
             
             if (mysqli_num_rows($res) > 0) {
-                while ($row = mysqli_fetch_assoc($res)) {
-                  for ($x = 0; $x < $row['count']; $x++) {
-                      if ($x == 0) {
-                        echo "<li  class='active' data-target='#carouselExampleIndicators' data-slide-to='" . $x . "'></li>";
-                      } else {
-                        echo "<li data-target='#carouselExampleIndicators' data-slide-to='" . $x . "'></li>";
-                      }
-                  } 
-                }
+              while ($row = mysqli_fetch_assoc($res)) {
+                for ($x = 0; $x < $row['count']; $x++) {
+                  if ($x == 0) {
+                    echo "<li  class='active' data-target='#carouselExampleIndicators' data-slide-to='" . $x . "'></li>";
+                  } else {
+                    echo "<li data-target='#carouselExampleIndicators' data-slide-to='" . $x . "'></li>";
+                  }
+                } 
+              }
             }
           ?>
         </ol>
@@ -65,16 +65,15 @@
             $first = true;
             
             if (mysqli_num_rows($res) > 0) {
-                while ($row = mysqli_fetch_assoc($res)) {
-                    if ($first) {
-                      echo '<div class="carousel-item active" style="background-image: url(\'https://res.cloudinary.com/htqimzujb/image/upload/' . $row['file_name'] . '\');"></div>';
-                      $first = false;
-                    } else {
-                      echo '<div class="carousel-item" style="background-image: url(\'https://res.cloudinary.com/htqimzujb/image/upload/' . $row['file_name'] . '\');"></div>';
-                    }
+              while ($row = mysqli_fetch_assoc($res)) {
+                if ($first) {
+                  echo '<div class="carousel-item active" style="background-image: url(\'https://res.cloudinary.com/htqimzujb/image/upload/' . $row['file_name'] . '\');"></div>';
+                  $first = false;
+                } else {
+                  echo '<div class="carousel-item" style="background-image: url(\'https://res.cloudinary.com/htqimzujb/image/upload/' . $row['file_name'] . '\');"></div>';
                 }
+              }
             }
-          
           ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

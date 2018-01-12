@@ -51,7 +51,6 @@
                                   echo "<h1>" . $row['total'] . "</h1>";
                               }
                           }
-                        
                         ?>
                         <p>Visits</p>
                     </div>
@@ -72,7 +71,6 @@
                                           }
                                       }
                                   }
-                                
                                 ?>
                             </div>
                         </div>
@@ -92,7 +90,6 @@
                 </div>
             </div>
         </div>
-    
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,7 +1,6 @@
 <?php 
 
     require '../Cloudinary/Cloudinary.php';
-    require '../Cloudinary/Uploader.php';
     require '../Cloudinary/Api.php';
     
     include '../../Cloudinary_API/cloudinary_connection.php';

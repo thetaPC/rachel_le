@@ -8,8 +8,6 @@
         }
     }
     
-    // $hashed_passworddb = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
-    // echo $hashed_passworddb;
     $sql = "SELECT username, password FROM admin WHERE username='" . $_POST['username'] . "'";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
