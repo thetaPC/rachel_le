@@ -108,9 +108,13 @@
                                 
                                 if (mysqli_num_rows($res1) > 0) {
                                     while ($row1 = mysqli_fetch_assoc($res1)) {
-                                        echo "<div class='col-md-2_5 marg-b'>
-                                            <a class='a_img' data-fancybox='group' data-caption='" . $row1['name'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row1['file_name'] . "'>
-                                                <div class='resize'>
+                                        echo "<div class='col-md-2_5 marg-b'>";
+                                            if ($row['description'] != "") {
+                                                echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . " - " . $row['description'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
+                                            } else {
+                                                echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
+                                            }
+                                               echo "<div class='resize'>
                                                   <img id='" . $row['id'] . "' class='arc-img img-thumbnail' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row1['file_name'] . "' alt='" . $row1['name'] . "' /> 
                                                 </div>
                                             </a>

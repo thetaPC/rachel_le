@@ -56,9 +56,13 @@
           
           if (mysqli_num_rows($res) > 0) {
               while ($row = mysqli_fetch_assoc($res)) {
-                  echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4 smaller'>     
-                          <a class='a_img' data-fancybox='group' data-caption='" . $row['description'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>
-                            <div class='resize'>
+                  echo "<div class='tile scale-anm " . $row['category'] . " all col-md-4 smaller'>";     
+                          if ($row['description'] != "") {
+                            echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . " - " . $row['description'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
+                          } else {
+                            echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
+                          }
+                            echo "<div class='resize'>
                               <img id='" . $row['id'] . "' class='port-img' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
                             </div>
                           </a>
