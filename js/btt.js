@@ -12,18 +12,3 @@ $('#return-to-top').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 500);
 });
-
-if ($(window).width() <= 683) {
-    $('#scrollup').remove();
-    $('#return-to-top').append("<img id='scrollup' class='shrink' src='../img/required/up.png' />");
-} 
-
-$(window).resize(function() {
-    if ($(window).width() <= 683) {
-        $('#scrollup').remove()
-        $('#return-to-top').append("<img id='scrollup' class='shrink' src='../img/required/up.png' />");
-    } else {
-        $('#scrollup').remove();
-        $('#return-to-top').append("<i id='scrollup' class='fa fa-chevron-up' aria-hidden='true'></i>");
-    }
-});

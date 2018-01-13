@@ -29,7 +29,7 @@
 
     <div id="contact" class="cont-section">
 		<div class="section-content">
-			<h1 class="section-header">Get in <span class="content-header"> Touch with me</span></h1>
+			<h1 class="section-header"><span class="content-header">Get in touch with me</span></h1>
 			<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
 		</div>
 		<div class="contact-section">

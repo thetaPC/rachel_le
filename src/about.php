@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../css/about.css">
   </head>
 
-  <body class="bg-color">
+  <body>
 
     <?php include 'repeats/navbar.php'; ?>
     <?php include 'repeats/social.php'; ?>
@@ -35,9 +35,7 @@
                     
                     if (mysqli_num_rows($res) > 0) {
                         while ($row = mysqli_fetch_assoc($res)) {
-                            echo "<img src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['profile_img'] . "' class='rounded-circle img-fluid img-thumbnail' alt='Rachel Le'>";
-                            // echo "<img src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['profile_img'] . "' class='rounded img-fluid img-thumbnail' alt='Rachel Le'>";
-                            // echo "<img src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['profile_img'] . "' class='rounded-circle img-fluid' alt='Rachel Le'>";
+                            echo "<img src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['profile_img'] . "' class='rounded img-fluid img-thumbnail' alt='Rachel Le'>";
                         }
                     }
                 ?>

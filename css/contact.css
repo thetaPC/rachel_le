@@ -4,7 +4,7 @@
 
 .content-header {
   font-family: 'Oleo Script', cursive;
-  color: #fcc500;
+  color: #9adcf2;
   font-size: 45px;
 }
 
@@ -13,10 +13,10 @@
 }
 
 body {
-    background: #7b6dd7; 
-    background: -webkit-linear-gradient(to left, #7b6dd7 , #5b2e80); 
+    background: #dbd9ed; 
+    background: -webkit-linear-gradient(to left, #dbd9ed , #5b2e80); 
     /*background: linear-gradient(to left, #3a6186 , #89253e); */
-    background: linear-gradient(to left, #7b6dd7 , #5b2e80);
+    background: linear-gradient(to left, #dbd9ed , #5b2e80);
     color: #fff;    
 }
 

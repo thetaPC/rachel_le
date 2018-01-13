@@ -14,7 +14,7 @@
     <!-- Toggler/collapsibe Button -->
     
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+        <span class="fa fa-chevron-down"></span>
     </button>
   
     <!-- Navbar links -->

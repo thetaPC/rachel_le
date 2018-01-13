@@ -27,8 +27,12 @@
 
 .custom-toggler .navbar-toggler {
     border-color: rgba(0,0,0, 0.3) !important; 
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
-.custom-toggler .navbar-toggler-icon {
-    background-image: url('../img/required/down.png');
+.fa-chevron-down {
+    margin: 0px !important;
+    color: #656464 !important;
+    padding: 3px 0px !important;
 }
