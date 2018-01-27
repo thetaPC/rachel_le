@@ -22,6 +22,8 @@
     bottom: auto;
     padding-bottom: 10px;
     padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
     top: 44%;
     margin-left: 20%;
     margin-right: 20%;
@@ -32,8 +34,14 @@
     color: #292b2c;
 }
 
-@media screen and (max-width: 683px) {
+@media screen and (max-width: 964px) and (min-width: 424px) {
     .intro-text {
-        font-size: 20px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 423px) {
+    .intro-text {
+        font-size: 16px;
     }
 }
