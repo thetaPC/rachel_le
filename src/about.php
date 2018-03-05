@@ -53,7 +53,7 @@
                         }
                     }
                 ?>
-                <p>Website created by: <a target="_blank" href="https://github.com/thetaPC">Maria Loza</a></p>
+                <p>Website created by: <a target="_blank" href="https://maria-loza.herokuapp.com/">Maria Loza</a></p>
         </div>
     </div>
 
