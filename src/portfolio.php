@@ -63,7 +63,7 @@
                             echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
                           }
                             echo "<div class='resize'>
-                              <img id='" . $row['id'] . "' class='port-img' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
+                              <img id='p" . $row['id'] . "' class='port-img' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "' alt='" . $row['description'] . "' />
                             </div>
                           </a>
                         </div>";

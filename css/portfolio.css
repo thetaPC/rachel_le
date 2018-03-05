@@ -44,6 +44,30 @@ span {
     outline-width: 1px;
 }
 
+#p311 {
+    transform: translate(-50%, -40%);
+}
+
+#p361 {
+    transform: translate(-50%, -20%);
+}
+
+#p371, #p481 {
+    transform: translate(-40%, -10%);
+}
+
+#p381 {
+    transform: translate(-40%, -20%);
+}
+
+#p391, #p401, #p411, #p421, #p431, #p441 {
+    transform: translate(-40%, -50%);
+}
+
+#p451 {
+    transform: translate(-27%, -30%);
+}
+
 @media only screen and (min-width: 1200px)  {
     
    .resize {
