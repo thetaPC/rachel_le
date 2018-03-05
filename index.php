@@ -35,7 +35,7 @@
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-caption intro">
-            <h4 class="intro-text">Artist. Designer. Coder to be. Intern and Marketing Coordinator at ValleyWorx.</h4>
+            <h4 class="intro-text">Artist. Designer. Coder to be. Intern and Director at ValleyWorx.</h4>
         </div>
         <ol class="carousel-indicators">
           <?php

@@ -31,26 +31,26 @@
         <div class="row justify-content-end">
             <div class="col-md-5">
                 <form id="filterForm" class="form-inline">
-                    <div class="form-group marg-r15">
-                        <label class="marg-r3" for="month">Month</label>
-                        <select id="month" class="custom-select" required name="month">
-                            <option selected value="">Select...</option>
-                            <?php
-                                $sql = "SELECT DISTINCT month FROM images ORDER BY month ASC";
+                    <!--<div class="form-group marg-r15">-->
+                    <!--    <label class="marg-r3" for="month">Month</label>-->
+                    <!--    <select id="month" class="custom-select" required name="month">-->
+                    <!--        <option selected value="">Select...</option>-->
+                    <!--        <?php-->
+                    <!--            $sql = "SELECT DISTINCT month FROM images ORDER BY month ASC";-->
                                 
-                                $res = mysqli_query($conn, $sql);
+                    <!--            $res = mysqli_query($conn, $sql);-->
                                 
-                                if (mysqli_num_rows($res) > 0) {
-                                    while ($row = mysqli_fetch_assoc($res)) {
-                                        $monthNum  = (int)$row['month'];
-                                        $dateObj   = DateTime::createFromFormat('!m', $monthNum);
-                                        $monthName = $dateObj->format('F'); 
-                                        echo "<option value='" . $monthName ."'>" . $monthName . "</option>";
-                                    }
-                                }
-                            ?>
-                        </select>
-                    </div>
+                    <!--            if (mysqli_num_rows($res) > 0) {-->
+                    <!--                while ($row = mysqli_fetch_assoc($res)) {-->
+                    <!--                    $monthNum  = (int)$row['month'];-->
+                    <!--                    $dateObj   = DateTime::createFromFormat('!m', $monthNum);-->
+                    <!--                    $monthName = $dateObj->format('F'); -->
+                    <!--                    echo "<option value='" . $monthName ."'>" . $monthName . "</option>";-->
+                    <!--                }-->
+                    <!--            }-->
+                    <!--        ?>-->
+                    <!--    </select>-->
+                    <!--</div>-->
                     <div class="form-group marg-r15">
                         <label class="marg-r3" for="year">Year</label>
                         <select id="year" class="custom-select" required name="year">
@@ -78,7 +78,8 @@
         <div clas="row">
             <div class="col-md-12">
                 <?php
-                    $sql = "SELECT * FROM images ORDER BY year DESC, month DESC";
+                    // $sql = "SELECT * FROM images ORDER BY year DESC, month DESC";
+                    $sql = "SELECT * FROM images ORDER BY year DESC";
                     
                     $res = mysqli_query($conn, $sql);
                     $year = 0;   
@@ -88,42 +89,61 @@
                     if (mysqli_num_rows($res) > 0) {
                         while ($row = mysqli_fetch_assoc($res)) {
                             if ($year != $row['year']) {
-                                echo "<h2>" . $row['year'] . "</h2>";
+                                echo "</div>"; //for the year
+                                echo "<h2 class='" . $row['year'] . "'>" . $row['year'] . "</h2>";
                                 $year = $row['year'];
-                            }
-                            
-                            if ($month != $row['month']) {
-                                $monthNum  = (int)$row['month'];
-                                $dateObj   = DateTime::createFromFormat('!m', $monthNum);
-                                $monthName = $dateObj->format('F'); 
-                                echo "<h5 class='" . $monthName . $year . "'>" . $monthName . "</h5>";
-                                $month = $row['month'];
-                            
-                            
-                                $sql1 = "SELECT * FROM images where year=" . $row['year'] . " AND month=" . $row['month'] . " ORDER BY year DESC, month DESC";
-                                
-                                $res1 = mysqli_query($conn, $sql1);
                                 
                                 echo "<div class='row arc_img'>";
+                            }
+                            
+                            
+                            
                                 
-                                if (mysqli_num_rows($res1) > 0) {
-                                    while ($row1 = mysqli_fetch_assoc($res1)) {
-                                        echo "<div class='col-md-2_5 marg-b'>";
+                                echo "<div class='col-md-2_5 marg-b'>";
                                             if ($row['description'] != "") {
                                                 echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . " - " . $row['description'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
                                             } else {
                                                 echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
                                             }
                                                echo "<div class='resize'>
-                                                  <img id='" . $row['id'] . "' class='arc-img img-thumbnail' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row1['file_name'] . "' alt='" . $row1['name'] . "' /> 
+                                                  <img id='" . $row['id'] . "' class='arc-img img-thumbnail' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "' alt='" . $row['name'] . "' /> 
                                                 </div>
                                             </a>
                                         </div>";
-                                    }
-                                }
+                            
+                            
+                            // if ($month != $row['month']) {
+                            //     $monthNum  = (int)$row['month'];
+                            //     $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                            //     $monthName = $dateObj->format('F'); 
+                            //     echo "<h5 class='" . $monthName . $year . "'>" . $monthName . "</h5>";
+                            //     $month = $row['month'];
+                            
+                            
+                            //     $sql1 = "SELECT * FROM images where year=" . $row['year'] . " AND month=" . $row['month'] . " ORDER BY year DESC, month DESC";
                                 
-                                echo "</div>";
-                            } 
+                            //     $res1 = mysqli_query($conn, $sql1);
+                                
+                            //     echo "<div class='row arc_img'>";
+                                
+                            //     if (mysqli_num_rows($res1) > 0) {
+                            //         while ($row1 = mysqli_fetch_assoc($res1)) {
+                            //             echo "<div class='col-md-2_5 marg-b'>";
+                            //                 if ($row['description'] != "") {
+                            //                     echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . " - " . $row['description'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
+                            //                 } else {
+                            //                     echo "<a class='a_img' data-fancybox='group' data-caption='" . $row['name'] . "' href='https://res.cloudinary.com/htqimzujb/image/upload/" . $row['file_name'] . "'>";
+                            //                 }
+                            //                   echo "<div class='resize'>
+                            //                       <img id='" . $row['id'] . "' class='arc-img img-thumbnail' src='https://res.cloudinary.com/htqimzujb/image/upload/" . $row1['file_name'] . "' alt='" . $row1['name'] . "' /> 
+                            //                     </div>
+                            //                 </a>
+                            //             </div>";
+                            //         }
+                            //     }
+                                
+                            //     echo "</div>";
+                            // } 
                         }
                     }
                 ?>
@@ -148,10 +168,17 @@
 
         $('#filter').on('click', function(e) {
             e.preventDefault();
-            if ($('#month').val().trim() != '' && $('#year').val().trim() != '') {
-              if ($('h5').hasClass($('#month').val().trim() + $('#year').val().trim())) {
+            // if ($('#month').val().trim() != '' && $('#year').val().trim() != '') {
+            //   if ($('h5').hasClass($('#month').val().trim() + $('#year').val().trim())) {
+            //       $('html, body').animate({
+            //         scrollTop: $('.' + $('#month').val().trim() + $('#year').val().trim()).offset().top,
+            //       }, 'slow');
+            //   }
+            // }
+            if ($('#year').val().trim() != '') {
+              if ($('h2').hasClass($('#year').val().trim())) {
                   $('html, body').animate({
-                    scrollTop: $('.' + $('#month').val().trim() + $('#year').val().trim()).offset().top,
+                    scrollTop: $('.' + $('#year').val().trim()).offset().top,
                   }, 'slow');
               }
             }

@@ -30,7 +30,7 @@
 
     <div id="contact" class="cont-section">
 		<div class="section-content">
-			<h1 class="section-header"><span class="content-header">Get in Touch with me</span></h1>
+			<h1 class="section-header"><span class="content-header">Get in Touch With Me</span></h1>
 			<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
 		</div>
 		<div class="contact-section">
@@ -57,7 +57,6 @@
     			  			 	<textarea class="form-control" name="msg" id="msg" placeholder="Enter Your Message" required></textarea>
     			  			</div>
     			  			<button id="contSub" type="submit" class="btn btn-outline-secondary submit">
-    			  			    <i class="fa fa-paper-plane" aria-hidden="true"></i>
     			  			    Send
 			  			    </button>
     					</div>
