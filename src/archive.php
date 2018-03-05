@@ -29,7 +29,8 @@
     
     <div class="container arch-section">
         <div class="row justify-content-end">
-            <div class="col-md-5">
+            <!--<div class="col-md-5">-->
+            <div class="col-md-3">
                 <form id="filterForm" class="form-inline">
                     <!--<div class="form-group marg-r15">-->
                     <!--    <label class="marg-r3" for="month">Month</label>-->
