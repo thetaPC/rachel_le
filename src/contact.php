@@ -31,7 +31,6 @@
     <div id="contact" class="cont-section">
 		<div class="section-content">
 			<h1 class="section-header"><span class="content-header">Get in Touch With Me</span></h1>
-			<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
 		</div>
 		<div class="contact-section">
 			<div class="container">
